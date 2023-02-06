@@ -15,8 +15,18 @@ function getComputerChoice(min, max) {
 
 
 function getPlayerChoice(){
-    let playerChoice= prompt("Rock, Paper, Scissors!");
-    return playerChoice.toLowerCase();
+    while(true){
+        let playerChoice= prompt("Rock, Paper, Scissors!");
+        let playerLower = playerChoice.toLowerCase();
+        if(playerLower == "rock" ||
+        playerLower == "paper" ||
+        playerLower == "scissors"){
+            return(playerLower);
+            break;
+        }
+
+    }
+
 }
 
 function playRound(playerSelection, computerSelection) {
