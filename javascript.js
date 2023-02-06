@@ -53,3 +53,23 @@ function playRound(playerSelection, computerSelection) {
   const playerSelection = getPlayerChoice();
   const computerSelection = getComputerChoice(1,4);
   console.log(playRound(playerSelection, computerSelection));
+
+function game(){
+    let wins = 0;
+    let losses = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = getPlayerChoice();
+        const computerSelection = getComputerChoice(1,4);
+        let wintielose = playRound(playerSelection, computerSelection);
+        console.log(wintielose);
+        if(wintielose === "win"){
+            ++wins;
+        }
+        else if(wintielose === "lose"){
+            ++losses;
+        }
+    }
+    return("You: " + wins + " Computer: " + losses);
+}
+
+console.log(game());
